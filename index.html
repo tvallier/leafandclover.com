@@ -1,0 +1,107 @@
+---
+layout: default
+title: Leaf & Clover
+description: A media production company.
+featured_image: /images/home/home.jpg
+---
+
+<style>
+	.button {
+	  display: inline-block;
+	  border-radius: 4px;
+	  background-color: hsl(0, 0%, 0%);
+	  border: none;
+	  color: #FFFFFF;
+	  text-align: center;
+	  font-size: 28px;
+	  padding: 20px;
+	  width: 200px;
+	  transition: all 0.3s;
+	  cursor: pointer;
+	  margin: 5px;
+	}
+	
+	.button span {
+	  cursor: pointer;
+	  display: inline-block;
+	  position: relative;
+	  transition: 0.3s;
+	}
+	
+	.button span:after {
+	  content: '\00bb';
+	  position: absolute;
+	  opacity: 0;
+	  top: 0;
+	  right: -20px;
+	  transition: 0.3s;
+	}
+	
+	.button:hover span {
+	  padding-right: 25px;
+	  
+	}
+
+	.button:hover {
+		background-color: hsl(0, 0%, 100%);
+		color:black;
+	}
+	
+	.button:hover span:after {
+	  opacity: 1;
+	  right: 0;
+	}
+</style>
+
+<section class="hero">
+
+	<div class="hero__image" style="background-image: url({{ page.featured_image | relative_url }})">
+		<div class="hero__overlay"></div>
+	</div>
+
+	<div class="wrap">
+
+		<h1>Leaf & Clover</h1>
+		<p>A media production company.</p>
+		<br>
+		<br>
+		<a href="/contact" class="button"><span>Contact </span></a>
+
+		{% include socials.html %}
+
+
+
+	</div>
+
+</section>
+
+<section class="listing">
+
+	<div class="wrap">
+
+		
+		<!-- HERES THE ORIGINAL PROJECT CARD LOADER - CUT UNTIL WE HAVE CONTENT
+
+		{% for project in site.projects reversed %}
+
+		<article class="post">
+
+			<div class="post__image-wrap">
+				<div class="post__image" style="background-image: url({{ project.featured_image | relative_url }})"></div>
+			</div>
+
+			<div class="post__content-wrap">
+				<div class="post__content">
+					<h2 class="post__title"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+					<p class="post__subtitle">{{ project.subtitle }}</p>
+					<p class="post__description">{{ project.description }}</p>
+				</div>
+			</div>
+
+		</article>
+
+		{% endfor %} -->
+
+	</div>
+
+</section>
